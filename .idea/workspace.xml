@@ -15,6 +15,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -113,6 +114,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -143,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1578245709766</updated>
       <workItem from="1578245716382" duration="342000" />
-      <workItem from="1578246066539" duration="806000" />
+      <workItem from="1578246066539" duration="3956000" />
     </task>
     <servers />
   </component>
@@ -162,7 +164,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -180,8 +182,36 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="220" key="#Notifications" timestamp="1578249023519">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="552" y="220" key="#Notifications/0.46.1920.1034@0.46.1920.1034" timestamp="1578249023519" />
+    <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578248257131">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="1175" y="479" key="FileChooserDialogImpl/0.46.1920.1034@0.46.1920.1034" timestamp="1578248257131" />
     <state width="1876" height="275" key="GridCell.Tab.0.bottom" timestamp="1578246735274">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -198,9 +228,25 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.right/0.46.1920.1034@0.46.1920.1034" timestamp="1578246735273" />
+    <state x="461" y="193" key="SettingsEditor" timestamp="1578248271870">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="461" y="193" key="SettingsEditor/0.46.1920.1034@0.46.1920.1034" timestamp="1578248271870" />
     <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1578246082825">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578246082825" />
+    <state x="769" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578249034826">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="769" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.46.1920.1034@0.46.1920.1034" timestamp="1578249034826" />
+    <state x="761" y="353" key="git4idea.merge.GitMergeDialog" timestamp="1578248425857">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="761" y="353" key="git4idea.merge.GitMergeDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578248425857" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578249510823">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578249510823" />
   </component>
 </project>
