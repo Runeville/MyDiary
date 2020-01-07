@@ -1,0 +1,52 @@
+body{
+    background-color: #4ad1fe;
+    color: white;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+}
+
+h1{
+    font-size: 62px;
+}
+
+a{
+    color: white;
+    transition: color 75ms;
+}
+
+a:hover{
+    color: black;
+}
+
+/*NAVBAR*/
+.navbar{
+    background-color: #59d6ff;
+    font-weight: 700;
+}
+.navbar-brand, .nav-link{
+    font-weight: 700;
+    font-size: 36px;
+}
+
+/*REGISTER*/
+.form-reg{
+    font-size: 50px;
+    height: calc(2.19rem + 17px);
+}
+
+.btn-reg{
+    background-color: #227ff4;
+    color: white;
+    font-size: 40px;
+    padding: 0 2rem;
+    opacity: 0.8;
+    transition: opacity 0.1s;
+}
+
+.btn-reg:hover{
+    opacity: 1;
+}
+
+.btn-pass{
+    font-size: 25px;
+}
