@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="" />
+    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +114,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bootstrap" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -146,6 +148,7 @@
       <updated>1578245709766</updated>
       <workItem from="1578245716382" duration="342000" />
       <workItem from="1578246066539" duration="4138000" />
+      <workItem from="1578287975415" duration="2823000" />
     </task>
     <servers />
   </component>
@@ -208,10 +211,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="552" y="220" key="#Notifications/0.46.1920.1034@0.46.1920.1034" timestamp="1578249023519" />
-    <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578248257131">
+    <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578326914047">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="1175" y="479" key="FileChooserDialogImpl/0.46.1920.1034@0.46.1920.1034" timestamp="1578248257131" />
+    <state x="1175" y="479" key="FileChooserDialogImpl/0.46.1920.1034@0.46.1920.1034" timestamp="1578326914047" />
     <state width="1876" height="275" key="GridCell.Tab.0.bottom" timestamp="1578250207371">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -232,10 +235,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="461" y="193" key="SettingsEditor/0.46.1920.1034@0.46.1920.1034" timestamp="1578248271870" />
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1578246082825">
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1578287977824">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578246082825" />
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578287977824" />
     <state x="769" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578249034826">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -244,9 +247,9 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="761" y="353" key="git4idea.merge.GitMergeDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578248425857" />
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578249510823">
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578288238730">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578249510823" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578288238730" />
   </component>
 </project>
