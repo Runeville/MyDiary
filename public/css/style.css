@@ -1,6 +1,7 @@
 body{
     background-color: #4ad1fe;
     color: white;
+    line-height: 1;
     font-size: 30px;
     font-family: 'Caveat', cursive;
 }
@@ -18,10 +19,16 @@ a:hover{
     color: black;
 }
 
+hr{
+    border-color: white;
+    opacity: .35;
+}
+
 /*NAVBAR*/
 .navbar{
     background-color: #59d6ff;
     font-weight: 700;
+    z-index: 1000;
 }
 .navbar-brand, .nav-link{
     font-weight: 700;
@@ -49,4 +56,39 @@ a:hover{
 
 .btn-pass{
     font-size: 25px;
+}
+
+/*SIDEBAR*/
+.sidebar{
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 68px;
+    left: 0;
+    background-color: #33ccfe;
+    overflow-x: hidden;
+    border-radius: 25px;
+}
+
+.link{
+    font-size: 30px;
+}
+
+/*DIARY*/
+.container-create{
+    width: 70%;
+    height: 83vh;
+    background: url("../img/diary.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container-create, .text-center{
+
+}
+
+.create-title{
+    border-bottom: #653d14 solid 2px;
+    margin-top: 8em;
 }

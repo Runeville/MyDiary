@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="Made a auth &amp; reg styles and managing">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
+    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Diary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_07_174257_create_diaries_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyDiary.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyDiary.loc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -141,10 +143,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bootstrap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/asd.scss" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\MyDiary.loc\public\img" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -178,7 +185,7 @@
       <workItem from="1578246066539" duration="4138000" />
       <workItem from="1578287975415" duration="2823000" />
       <workItem from="1578379843193" duration="14942000" />
-      <workItem from="1578414051394" duration="1438000" />
+      <workItem from="1578414051394" duration="12094000" />
     </task>
     <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
       <created>1578393031458</created>
@@ -187,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578393031458</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created connection between user and main page, made some little changes with login system">
+      <created>1578415709988</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578415709988</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,21 +268,34 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Made a auth &amp; reg styles and managing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a auth &amp; reg styles and managing" />
+    <MESSAGE value="Created connection between user and main page, made some little changes with login system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created connection between user and main page, made some little changes with login system" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="220" key="#File_Watchers" timestamp="1578418297945">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="552" y="220" key="#File_Watchers/0.46.1920.1034@0.46.1920.1034" timestamp="1578418297945" />
     <state x="552" y="220" key="#Notifications" timestamp="1578249023519">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="552" y="220" key="#Notifications/0.46.1920.1034@0.46.1920.1034" timestamp="1578249023519" />
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578394663040">
+    <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1578418023554">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578394663040" />
-    <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578326914047">
+    <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418023554" />
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578415707955">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="1175" y="479" key="FileChooserDialogImpl/0.46.1920.1034@0.46.1920.1034" timestamp="1578326914047" />
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578415707955" />
+    <state x="595" y="340" key="EditFileWatcherDialog" timestamp="1578418024279">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="595" y="340" key="EditFileWatcherDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418024279" />
+    <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578418008983">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="1175" y="479" key="FileChooserDialogImpl/0.46.1920.1034@0.46.1920.1034" timestamp="1578418008983" />
     <state width="1876" height="275" key="GridCell.Tab.0.bottom" timestamp="1578250207371">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -285,6 +312,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.right/0.46.1920.1034@0.46.1920.1034" timestamp="1578250207371" />
+    <state x="794" y="485" key="NewPhpFileDialog" timestamp="1578421636945">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="794" y="485" key="NewPhpFileDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578421636945" />
     <state x="461" y="193" key="SettingsEditor" timestamp="1578248271870">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -297,13 +328,17 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="769" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.46.1920.1034@0.46.1920.1034" timestamp="1578249034826" />
+    <state x="591" y="265" width="737" height="707" key="find.popup" timestamp="1578426832216">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="591" y="265" width="737" height="707" key="find.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578426832216" />
     <state x="761" y="353" key="git4idea.merge.GitMergeDialog" timestamp="1578248425857">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="761" y="353" key="git4idea.merge.GitMergeDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578248425857" />
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578414782188">
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578426851798">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578414782188" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578426851798" />
   </component>
 </project>
