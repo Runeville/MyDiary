@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="Made a auth &amp; reg styles and managing">
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,12 +128,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1VzAmYAvVxIYyhMhyltHvHtriH7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -170,8 +177,17 @@
       <workItem from="1578245716382" duration="342000" />
       <workItem from="1578246066539" duration="4138000" />
       <workItem from="1578287975415" duration="2823000" />
-      <workItem from="1578379843193" duration="12273000" />
+      <workItem from="1578379843193" duration="14942000" />
+      <workItem from="1578414051394" duration="1438000" />
     </task>
+    <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
+      <created>1578393031458</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578393031458</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +221,13 @@
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="OPEN_TABS">
@@ -229,6 +252,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Made a auth &amp; reg styles and managing" />
     <option name="LAST_COMMIT_MESSAGE" value="Made a auth &amp; reg styles and managing" />
   </component>
@@ -237,10 +261,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="552" y="220" key="#Notifications/0.46.1920.1034@0.46.1920.1034" timestamp="1578249023519" />
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578392996860">
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578394663040">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578392996860" />
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578394663040" />
     <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578326914047">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -265,10 +289,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="461" y="193" key="SettingsEditor/0.46.1920.1034@0.46.1920.1034" timestamp="1578248271870" />
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1578287977824">
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1578414051302">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578287977824" />
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578414051302" />
     <state x="769" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578249034826">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -277,9 +301,9 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="761" y="353" key="git4idea.merge.GitMergeDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578248425857" />
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578390977133">
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578414782188">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578390977133" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578414782188" />
   </component>
 </project>
