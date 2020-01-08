@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Diary;
 use Illuminate\Http\Request;
 
 class MainController extends Controller

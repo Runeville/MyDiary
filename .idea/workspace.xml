@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Diary.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_07_174257_create_diaries_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyDiary.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyDiary.loc.iml" afterDir="false" />
+    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="Made a diary creating system and showing list of diaries in a the sidebar; started making routing between diaries using get request">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DiaryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/CreateButton.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Diary.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Diary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_07_174257_create_diaries_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_07_174257_create_diaries_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +152,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/asd.scss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel.loc" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -185,7 +194,10 @@
       <workItem from="1578246066539" duration="4138000" />
       <workItem from="1578287975415" duration="2823000" />
       <workItem from="1578379843193" duration="14942000" />
-      <workItem from="1578414051394" duration="12094000" />
+      <workItem from="1578414051394" duration="12311000" />
+      <workItem from="1578468539385" duration="2139000" />
+      <workItem from="1578473015009" duration="23000" />
+      <workItem from="1578481060674" duration="13324000" />
     </task>
     <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
       <created>1578393031458</created>
@@ -201,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578415709988</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Started making of creation of diary">
+      <created>1578426923403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578426923403</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +288,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Made a auth &amp; reg styles and managing" />
     <MESSAGE value="Created connection between user and main page, made some little changes with login system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created connection between user and main page, made some little changes with login system" />
+    <MESSAGE value="Started making of creation of diary" />
+    <MESSAGE value="Made a diary creating system and showing list of diaries in a the sidebar; started making routing between diaries using get request" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a diary creating system and showing list of diaries in a the sidebar; started making routing between diaries using get request" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#File_Watchers" timestamp="1578418297945">
@@ -284,18 +305,22 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418023554" />
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578415707955">
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578494396118">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578415707955" />
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578494396118" />
     <state x="595" y="340" key="EditFileWatcherDialog" timestamp="1578418024279">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="595" y="340" key="EditFileWatcherDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418024279" />
-    <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578418008983">
+    <state x="1175" y="479" key="FileChooserDialogImpl" timestamp="1578489915938">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="1175" y="479" key="FileChooserDialogImpl/0.46.1920.1034@0.46.1920.1034" timestamp="1578418008983" />
+    <state x="1175" y="479" key="FileChooserDialogImpl/0.46.1920.1034@0.46.1920.1034" timestamp="1578489915938" />
+    <state x="0" y="46" key="FileDocumentManager.FileCacheConflict" timestamp="1578481401491">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="0" y="46" key="FileDocumentManager.FileCacheConflict/0.46.1920.1034@0.46.1920.1034" timestamp="1578481401491" />
     <state width="1876" height="275" key="GridCell.Tab.0.bottom" timestamp="1578250207371">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -312,18 +337,22 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state width="1876" height="275" key="GridCell.Tab.0.right/0.46.1920.1034@0.46.1920.1034" timestamp="1578250207371" />
-    <state x="794" y="485" key="NewPhpFileDialog" timestamp="1578421636945">
+    <state x="709" y="376" key="NewPhpClassDialog" timestamp="1578486134059">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="794" y="485" key="NewPhpFileDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578421636945" />
+    <state x="709" y="376" key="NewPhpClassDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578486134059" />
+    <state x="794" y="485" key="NewPhpFileDialog" timestamp="1578485750157">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="794" y="485" key="NewPhpFileDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578485750157" />
     <state x="461" y="193" key="SettingsEditor" timestamp="1578248271870">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="461" y="193" key="SettingsEditor/0.46.1920.1034@0.46.1920.1034" timestamp="1578248271870" />
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1578414051302">
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1578473017452">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578414051302" />
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578473017452" />
     <state x="769" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578249034826">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -336,9 +365,13 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="761" y="353" key="git4idea.merge.GitMergeDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578248425857" />
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578426851798">
+    <state x="616" y="256" key="run.anything.popup" timestamp="1578485762789">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578426851798" />
+    <state x="616" y="256" key="run.anything.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578485762789" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1578492541753">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578492541753" />
   </component>
 </project>

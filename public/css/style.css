@@ -60,11 +60,11 @@ hr{
 
 /*SIDEBAR*/
 .sidebar{
-    height: 100%;
     width: 15%;
     position: fixed;
     z-index: 1;
-    top: 68px;
+    bottom: 0;
+    height: calc(100% - 68px);
     left: 0;
     background-color: #33ccfe;
     overflow-x: hidden;
@@ -75,10 +75,15 @@ hr{
     font-size: 30px;
 }
 
+abbr, abbr[title]{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*DIARY*/
 .container-create{
     width: 70%;
-    height: 83vh;
+    height: 82vh;
     background: url("../img/diary.jpg") no-repeat;
     background-size: cover;
     position: relative;
@@ -91,4 +96,23 @@ hr{
 .create-title{
     border-bottom: #653d14 solid 2px;
     margin-top: 8em;
+}
+
+#title{
+    resize: none;
+    background: none;
+    border: none;
+    color: white;
+
+    overflow: hidden;
+}
+
+#title:focus{
+    outline: none;
+}
+
+#title::placeholder{
+    color: white;
+    opacity: 0.6;
+    font-weight: 700;
 }

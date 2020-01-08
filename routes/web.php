@@ -17,3 +17,5 @@ Auth::routes();
 Route::get('/', 'MainController@index');
 
 //Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/create/', 'DiaryController@store');
