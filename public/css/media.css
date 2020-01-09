@@ -1,0 +1,43 @@
+/*MEDIA 1300px*/
+@media (max-width: 1300px) {
+    /*SIDEBAR*/
+    .sidebar{
+        width: 80px;
+    }
+    .sidebar ul, .sidebar div a, .sidebar hr{
+        opacity: 0;
+        display: none;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #sidebar-burger{
+        display: inline-block;
+    }
+
+    .btn-reg{
+        font-size: 37px;
+    }
+
+}
+
+/*MEDIA 800px*/
+@media (max-width: 800px){
+    body{
+        font-size: 26px;
+    }
+
+    /*NAVBAR*/
+    .navbar-brand, .nav-link{
+        font-size: 32px;
+    }
+
+    /*SIDEBAR*/
+    .sidebar{
+        top: 58px;
+    }
+
+    /*DIARY*/
+    .btn-reg{
+        font-size: 32px;
+    }
+}

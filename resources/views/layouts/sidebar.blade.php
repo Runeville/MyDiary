@@ -1,9 +1,11 @@
-<aside class="sidebar">
+<aside id="sidebar" class="sidebar">
     <div class="text-center w-100 mt-3">
+        <img id="sidebar-burger" src="{{ asset('img/sidebar-burger.png') }}" alt="">
         <a href="#">Create new diary</a>
     </div>
+
     <hr>
-    <ul class="offset-1">
+    <ul>
         @foreach($user->diaries as $diary)
             <li><a href="/?dr={{$diary->id}}"><abbr title="<?= nl2br($diary->title) ?>"><?= nl2br($diary->title) ?></abbr></a></li>
         @endforeach
