@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="Made a slide for sidebar and some s">
-      <change afterPath="$PROJECT_DIR$/public/css/media.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/sidebar-burger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +177,7 @@
       <workItem from="1578468539385" duration="2139000" />
       <workItem from="1578473015009" duration="23000" />
       <workItem from="1578481060674" duration="14139000" />
-      <workItem from="1578548344128" duration="7727000" />
+      <workItem from="1578548344128" duration="7801000" />
     </task>
     <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
       <created>1578393031458</created>
@@ -215,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578494653671</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Made some styling and created a slider for sidebar">
+      <created>1578557565251</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578557565251</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +284,8 @@
     <MESSAGE value="Created connection between user and main page, made some little changes with login system" />
     <MESSAGE value="Started making of creation of diary" />
     <MESSAGE value="Made a diary creating system and showing list of diaries in a the sidebar; started making routing between diaries using get request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a diary creating system and showing list of diaries in a the sidebar; started making routing between diaries using get request" />
+    <MESSAGE value="Made some styling and created a slider for sidebar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some styling and created a slider for sidebar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#File_Watchers" timestamp="1578418297945">
@@ -300,10 +300,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418023554" />
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578556250466">
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1578557563265">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578556250466" />
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1578557563265" />
     <state x="595" y="340" key="EditFileWatcherDialog" timestamp="1578418024279">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
