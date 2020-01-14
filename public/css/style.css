@@ -95,12 +95,17 @@ abbr, abbr[title]{
 }
 
 /*DIARY*/
-.container-create{
+.container-diary{
     width: 70%;
-    height: 825px;
-    background: url("../img/diary.jpg") no-repeat;
+    height: 80vh;
+    overflow: scroll;
     background-size: cover;
     position: relative;
+}
+
+.create-diary{
+    background: url("../img/diary.jpg") no-repeat;
+    height: 900px;
 }
 
 .create-title{

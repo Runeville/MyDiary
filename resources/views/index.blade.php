@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container container-create">
+    <div class="container container-diary">
         @include('layouts.create')
     </div>
 
