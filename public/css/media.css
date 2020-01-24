@@ -1,5 +1,5 @@
-/*MEDIA 1300px*/
-@media (max-width: 1300px) {
+/*MEDIA 1615px*/
+@media (max-width: 1615px) {
     /*SIDEBAR*/
     .sidebar{
         width: 80px;
@@ -7,7 +7,7 @@
     .sidebar ul, .sidebar div a, .sidebar hr{
         opacity: 0;
         display: none;
-        transition: all 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
     }
 
     #sidebar-burger{
@@ -40,5 +40,9 @@
     /*DIARY*/
     .btn-reg{
         font-size: 32px;
+    }
+
+    #title{
+        font-size: 30px;
     }
 }

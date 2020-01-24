@@ -12,6 +12,20 @@ class DiaryController extends Controller
         $this->middleware('auth');
     }
 
+    public function index(Diary $diary){
+        $user = auth()->user();
+        $method = 'show';
+
+        return view('index', compact('user', 'method', 'diary'));
+    }
+
+    public function create(){
+        $user = auth()->user();
+        $method = 'create';
+
+        return view('index', compact('user', 'method'));
+    }
+
     public function store(){
         $data = request()->validate([
             'title' => 'required|max:100|min:2',
@@ -34,6 +48,6 @@ class DiaryController extends Controller
         }
 
 //        Redirecting on the just created diary
-        return redirect("/?dr=" . $created_diary);
+        return redirect("/show/" . $created_diary);
     }
 }

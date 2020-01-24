@@ -8,36 +8,23 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-{{--    FIRST TWO INPUTS    --}}
-        <div class="form-group row mb-5">
+{{--    NAME    --}}
+        <div class="form-group row mb-4">
 
             <label for="name"></label>
-            <div class="col-md-5">
-                <input id="name" type="text" class="form-control form-reg @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="off" placeholder="Name" required autofocus>
+            <div class="col-md-6 offset-md-3">
+                <input id="name" type="text" class="text-center form-control form-reg @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="off" placeholder="Name" required autofocus>
 
                 @error('name')
                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                @enderror
-            </div>
-
-            <div class="col-md-2"></div>
-
-            <label for="login"></label>
-            <div class="col-md-5">
-                <input id="login" type="text" class="form-control form-reg @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" autocomplete="login" placeholder="Login" required>
-
-                @error('login')
-                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                    <strong>{{ $message }}</strong>
+                </span>
                 @enderror
             </div>
         </div>
 
 {{--    EMAIL    --}}
-        <div class="form-group row mb-5">
+        <div class="form-group row mb-4">
             <div class="col-md-3"></div>
             <label for="email"></label>
             <div class="col-md-6 d-flex justify-content-center">
@@ -47,23 +34,23 @@
         </div>
 
 {{--    LAST TWO INPUTS (PASSWORD)    --}}
-        <div class="form-group row mb-5">
+        <div class="form-group row mb-4">
             <label for="password"></label>
 
-            <div class="col-md-5">
-                <input id="password" type="password" class="form-control form-reg @error('password') is-invalid @enderror" name="password" placeholder="Password" autocomplete="new-password" required>
+            <div class="col-md-6 offset-md-3">
+                <input id="password" type="password" class="text-center form-control form-reg @error('password') is-invalid @enderror" name="password" placeholder="Password" autocomplete="new-password" required>
                 @error('password')
                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                    <strong>{{ $message }}</strong>
+                </span>
                 @enderror
             </div>
+        </div>
 
-            <div class="col-md-2"></div>
-
+        <div class="form-group row mb-4">
             <label for="password-confirm"></label>
-            <div class="col-md-5">
-                <input id="password-confirm" type="password" class="form-control form-reg" name="password_confirmation" placeholder="Confirm passwrod" autocomplete="new-password" required>
+            <div class="col-md-6 offset-md-3">
+                <input id="password-confirm" type="password" class="text-center form-control form-reg" name="password_confirmation" placeholder="Confirm passwrod" autocomplete="new-password" required>
             </div>
         </div>
 

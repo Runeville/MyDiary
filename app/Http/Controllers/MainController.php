@@ -14,7 +14,8 @@ class MainController extends Controller
 
     public function index(){
         $user = auth()->user();
+        $method = 'create';
 
-        return view('index', compact('user'));
+        return view('index', compact('user', 'method'));
     }
 }

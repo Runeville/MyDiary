@@ -3,7 +3,11 @@
 @section('content')
 
     <div class="container container-diary">
-        @include('layouts.create')
+        @if($method === 'create')
+            @include('layouts.create')
+        @elseif($method === 'show')
+            @include('layouts.show')
+        @endif
     </div>
 
     @include('layouts.sidebar')
