@@ -1,4 +1,4 @@
-<aside id="sidebar" class="sidebar">
+<aside id="sidebar" class="sidebar sidebar-short">
     <div class="text-center w-100 mt-3">
         <img id="sidebar-burger" src="{{ asset('img/sidebar-burger.png') }}" alt="">
         <a href="/create">Create new diary</a>

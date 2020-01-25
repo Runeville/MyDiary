@@ -18,6 +18,7 @@ Route::get('/', 'MainController@index');
 
 Route::get('/create', 'DiaryController@create');
 Route::get('/show/{diary}', 'DiaryController@index');
-//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/create', 'DiaryController@store');
+
+Route::post('/p/create/{diary}', 'PostController@store');

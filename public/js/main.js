@@ -10,7 +10,8 @@ function displaySidebar(){
     let getBurger = document.getElementById('sidebar-burger');
 
     if(sidebar === false){
-        getSidebar.style.width = "33vh";
+        getSidebar.classList.remove('sidebar-short');
+        getSidebar.classList.add('sidebar-full');
         getBurger.style.width = '40px';
         getBurger.style.transform = 'rotate(-90deg)';
         getSidebarUl.style.display = 'block';
@@ -21,7 +22,8 @@ function displaySidebar(){
         getSidebarHr.style.opacity = '.35';
         sidebar = true;
     } else {
-        getSidebar.style.width = "80px";
+        getSidebar.classList.remove('sidebar-full');
+        getSidebar.classList.add('sidebar-short');
         getBurger.style.transform = 'rotate(0deg)';
         getSidebarUl.style.opacity = '0';
         getSidebarUl.style.display = 'none';
@@ -32,4 +34,13 @@ function displaySidebar(){
         sidebar = false;
     }
 
+}
+
+document.getElementById("btn-show-diary").addEventListener("click", showDiary);
+function showDiary(){
+    let getDiaryMain = document.getElementById('diary-show');
+    let getDiaryTitle = document.getElementById('diary-title');
+
+    getDiaryMain.style.display = 'block';
+    getDiaryTitle.style.display = 'none';
 }

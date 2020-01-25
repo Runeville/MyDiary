@@ -16,7 +16,11 @@ class DiaryController extends Controller
         $user = auth()->user();
         $method = 'show';
 
-        return view('index', compact('user', 'method', 'diary'));
+        $posts = $diary->posts()->get();
+        $post_last = $diary->posts()->latest('id')->count();
+        $post_new = $post_last + 1;
+
+        return view('index', compact('user', 'method', 'diary', 'posts', 'post_new', 'post_last'));
     }
 
     public function create(){

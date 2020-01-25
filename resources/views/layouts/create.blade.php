@@ -1,4 +1,4 @@
-<div class="create-diary row">
+<div class="diary-handbook row">
     <div class="col-4 offset-4 text-center">
         <form action="/create" method="post">
             @csrf

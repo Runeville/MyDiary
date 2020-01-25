@@ -1,9 +1,6 @@
 /*MEDIA 1615px*/
 @media (max-width: 1615px) {
     /*SIDEBAR*/
-    .sidebar{
-        width: 80px;
-    }
     .sidebar ul, .sidebar div a, .sidebar hr{
         opacity: 0;
         display: none;
@@ -14,11 +11,36 @@
         display: inline-block;
     }
 
+    .sidebar-short{
+        width: 80px;
+    }
+
     /*DIARY*/
     .btn-reg{
         font-size: 37px;
     }
 
+}
+
+/*MEDIA 1300px*/
+@media (max-width: 1300px){
+    .container-diary{
+        width: 960px;
+    }
+}
+
+/*MEDIA 1120px*/
+@media (max-width: 1120px){
+    .container-diary{
+        width: 800px;
+    }
+}
+
+/*MEDIA 885px*/
+@media (max-width: 885px){
+    .container-diary{
+        width: 600px;
+    }
 }
 
 /*MEDIA 800px*/
@@ -37,7 +59,15 @@
         top: 58px;
     }
 
+    .sidebar-short{
+        width: 50px;
+    }
+
     /*DIARY*/
+    .container-diary{
+        width: 75%;
+    }
+
     .btn-reg{
         font-size: 32px;
     }
