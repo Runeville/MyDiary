@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Diary;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DiaryController extends Controller
 {
@@ -17,10 +18,11 @@ class DiaryController extends Controller
         $method = 'show';
 
         $posts = $diary->posts()->get();
-        $post_last = $diary->posts()->latest('id')->count();
+        $post_last = $diary->posts()->latest('id')->first()->counter;
         $post_new = $post_last + 1;
+        $current_post = $diary->posts()->where('counter', 1)->get()[0];
 
-        return view('index', compact('user', 'method', 'diary', 'posts', 'post_new', 'post_last'));
+        return view('index', compact('user', 'method', 'diary', 'posts', 'post_new', 'post_last', 'current_post'));
     }
 
     public function create(){

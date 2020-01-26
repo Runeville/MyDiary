@@ -165,13 +165,23 @@ abbr, abbr[title]{
 /*Post viewing*/
 #diary-show{
     color: black;
-    text-align: center;
     padding-top: 15px;
+}
+
+#page-view{
+    text-align: center;
+    margin-top: 15px;
+}
+#left-arrow{
+    cursor: pointer;
+}
+#right-arrow{
+    cursor: pointer;
 }
 
 /*Post creating*/
 .post-content{
-    margin: 38px 46px 0;
+    margin: 22px 46px 0;
     width: 1070px;
     height: 695px;
     font-size: 30px;

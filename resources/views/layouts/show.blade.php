@@ -5,19 +5,21 @@
     </div>
 
 {{--  POST VIEWING  --}}
+    @if($method == 'show')
     <div id="diary-show" class="diary-main">
         <div class="post-content">
-
+            {{ $current_post->content }}
         </div>
         <div id="page-view">
-            <span><</span> 1/{{$post_last}} <span>></span>
+            <span id="left-arrow"><</span> <span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span> <span id="right-arrow">></span>
         </div>
     </div>
+    @endif
 
 {{--POST CREATING--}}
     <form id="post-create" action="p/create/{{ $diary }}">
         @csrf
-        <div id="diary-main" class="diary-main">
+        <div id="create-post" class="diary-main">
             <div class="post-content" contenteditable="true">
 
             </div>
