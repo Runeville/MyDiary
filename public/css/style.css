@@ -24,6 +24,11 @@ hr{
     opacity: .35;
 }
 
+.btn{
+    font-size: 30px;
+    line-height: 1;
+}
+
 /*NAVBAR*/
 .navbar{
     background-color: #59d6ff;
@@ -45,7 +50,7 @@ hr{
     background-color: #227ff4;
     color: white;
     font-size: 40px;
-    padding: 0 2rem;
+    padding: 5px 2rem;
     opacity: 0.8;
     transition: opacity 0.1s;
 }
@@ -103,7 +108,7 @@ abbr, abbr[title]{
 .container-diary{
     margin-top: 20px;
     /*width: 75%;*/
-    width: 1140px;
+    width: 1125px;
     height: 85vh;
     overflow: scroll;
     background-size: cover;
@@ -160,17 +165,25 @@ abbr, abbr[title]{
     height: 800px;
     width: 1150px;
     position: absolute;
+    padding-top: 15px;
 }
 
 /*Post viewing*/
 #diary-show{
     color: black;
-    padding-top: 15px;
+
 }
 
-#page-view{
-    text-align: center;
-    margin-top: 15px;
+.page-bottom{
+    height: 68px;
+}
+#arrows-container{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
 }
 #left-arrow{
     cursor: pointer;

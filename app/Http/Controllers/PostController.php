@@ -21,6 +21,7 @@ class PostController extends Controller
             'content' => $data['content'],
             'counter' => $data['counter'],
         ]);
+        return $data;
     }
 
     public function show(Diary $diary, $post){

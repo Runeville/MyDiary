@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="">
+    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="Finishing switching between posts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/viewing-pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/viewing-pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/viewing-pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/diary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +198,7 @@
       <workItem from="1579322400678" duration="55000" />
       <workItem from="1579963337966" duration="10584000" />
       <workItem from="1580011479281" duration="25000" />
-      <workItem from="1580019698413" duration="17610000" />
+      <workItem from="1580019698413" duration="31045000" />
     </task>
     <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
       <created>1578393031458</created>
@@ -255,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580034561033</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finishing switching between posts">
+      <created>1580038175020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580038175020</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +337,8 @@
     <MESSAGE value="Edited sidebar, started making post creating and viewing" />
     <MESSAGE value="made switching between posts" />
     <MESSAGE value="Made auto creating first post when a new diary is created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made auto creating first post when a new diary is created" />
+    <MESSAGE value="Finishing switching between posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing switching between posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#File_Watchers" timestamp="1578418297945">
@@ -344,10 +353,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418023554" />
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580034559253">
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580051740091">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580034559253" />
+    <state x="585" y="155" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580051740091" />
     <state x="595" y="340" key="EditFileWatcherDialog" timestamp="1578418024279">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -408,9 +417,9 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="616" y="256" key="run.anything.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578485762789" />
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1580036627372">
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1580049711299">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1580036627372" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1580049711299" />
   </component>
 </project>

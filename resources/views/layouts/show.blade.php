@@ -7,23 +7,23 @@
 {{--  POST VIEWING  --}}
     @if($method == 'show')
     <div id="diary-show" class="diary-main">
-        <div class="post-content">
+        <div id="post-content-show" class="post-content">
             {{ $current_post->content }}
         </div>
-        <div id="page-view">
-            <span id="left-arrow" class="not_active"><</span> <span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span> <span id="right-arrow">></span>
+        <div class="page-bottom row align-items-center">
+            <div id="arrows-container" class="offset-5 col-3">
+                <span id="left-arrow" class="not_active"><</span> <span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span> <span id="right-arrow">></span>
+            </div>
+            <button id="post-create-btn" class="btn">Create new +</button>
         </div>
     </div>
     @endif
 
 {{--POST CREATING--}}
-    <form id="post-create" action="p/create/{{ $diary }}">
-        @csrf
-        <div id="create-post" class="diary-main">
-            <div class="post-content" contenteditable="true">
-
-            </div>
+    <div id="create-post" class="diary-main">
+        <div id="post-create-area" class="post-content" contenteditable="true"></div>
+        <div class="page-bottom row align-items-center">
+            <button id="post-save" class="btn offset-2">Save post</button>
         </div>
-    </form>
-
+    </div>
 </div>
