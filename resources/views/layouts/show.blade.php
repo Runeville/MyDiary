@@ -1,6 +1,6 @@
 <div class="diary-handbook row">
     <div id="diary-title" class="col-4 offset-4 text-center">
-        <p class="create-title mb-4 text-center">{{ $diary->title }}</p>
+        <p class="create-title mb-4 text-center"><span id="diary-id" style="display: none">{{$diary->id}}</span>{{ $diary->title }}</p>
         <button id="btn-show-diary" class="btn btn-reg">Open the diary</button>
     </div>
 
@@ -11,7 +11,7 @@
             {{ $current_post->content }}
         </div>
         <div id="page-view">
-            <span id="left-arrow"><</span> <span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span> <span id="right-arrow">></span>
+            <span id="left-arrow" class="not_active"><</span> <span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span> <span id="right-arrow">></span>
         </div>
     </div>
     @endif

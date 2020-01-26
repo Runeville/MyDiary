@@ -179,6 +179,11 @@ abbr, abbr[title]{
     cursor: pointer;
 }
 
+.not_active{
+    opacity: 0.5;
+    cursor: default !important;
+}
+
 /*Post creating*/
 .post-content{
     margin: 22px 46px 0;
