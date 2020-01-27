@@ -40,7 +40,6 @@ $(document).ready(function(){
     }
     //SAVING POSTS
     function savePost(content, diary, postToUpdate = null) {
-        console.log(postToUpdate);
         if (content !== '') {
             if(postToUpdate === null) {
                 $.post('/p/create/' + diary, {title: 'title', content: content}, function (data) {
@@ -84,37 +83,74 @@ $(document).ready(function(){
             })
     });
     //===========================================================================================
+    //SWITCHING POSTS+++++++++++++++++++++
+    //SWITCHING BY INPUT
+    function showPost(post = 1){
+        let diary = parseInt(document.getElementById('diary-id').innerHTML);
+        let lastPost = parseInt(document.getElementById('last-post').innerHTML);
+        if(post > lastPost || post < 1) {
+            post = 1;
+        }
+        $.get("/show/" + diary + "/" + post, function (data) {
+            $("#current-post").html(data.post.counter);
+            $("#post-content-show").html(data.post.content);
+        });
+        checkArrow(post);
+
+    }
+
+    function checkArrow(currentPost){
+        let lastPost = parseInt(document.getElementById('last-post').innerHTML);
+        currentPost = parseInt(currentPost);
+        if(currentPost === lastPost){
+            $('#right-arrow').addClass('not_active');
+        } else {
+            $('#right-arrow').removeClass('not_active');
+        }
+        if(currentPost === 1){
+            $('#left-arrow').addClass('not_active');
+        } else {
+            $('#left-arrow').removeClass('not_active');
+        }
+    }
+
+    let pEdit = $("#pEdit");
+    let pEditContent;
+    //Hide
+    $(document).click(function (e) {
+        if (!pEdit.is(e.target)
+            && pEdit.has(e.target).length === 0)
+        {
+            pEdit.hide();
+            pEditContent = $('#pEdit input').val();
+            if(pEditContent) {
+                document.getElementById('current-post').innerText = pEditContent;
+                document.getElementById('c-post-input').value = null;
+
+                showPost(pEditContent);
+
+            }
+        }
+    });
+    //Show
+    $('#clickToEdit').dblclick(function () {
+        document.getElementById('c-post-input').value = document.getElementById('current-post').innerText;
+        pEdit.show();
+    });
 
     //RIGHT ARROW
     $('#right-arrow').click(function () {
-        let diary = parseInt(document.getElementById('diary-id').innerHTML);
-        let lastPost = parseInt(document.getElementById('last-post').innerHTML);
         let currentPost = parseInt(document.getElementById('current-post').innerHTML);
-        if(currentPost < lastPost) {
-            $.get("/show/" + diary + "/" + (currentPost + 1), function (data) {
-                $("#current-post").html(data.post.counter);
-                $("#post-content-show").html(data.post.content);
-            })
+        if(currentPost !== parseInt(document.getElementById('last-post').innerText)) {
+            showPost(currentPost + 1);
         }
-        if(currentPost === lastPost - 1){
-            $('#right-arrow').addClass('not_active');
-        }
-        $('#left-arrow').removeClass('not_active');
     });
 
     //LEFT ARROW
     $('#left-arrow').click(function () {
-        let diary = parseInt(document.getElementById('diary-id').innerHTML);
         let currentPost = parseInt(document.getElementById('current-post').innerHTML);
-        if(currentPost > 1) {
-            $.get("/show/" + diary +"/" + (currentPost - 1), function (data) {
-                $("#current-post").html(data.post.counter);
-                $("#post-content-show").html(data.post.content);
-            })
+        if(currentPost !== 1) {
+            showPost(currentPost - 1);
         }
-        if(currentPost <= 2){
-            $('#left-arrow').addClass('not_active');
-        }
-        $('#right-arrow').removeClass('not_active');
     })
 });

@@ -195,6 +195,18 @@ abbr, abbr[title]{
     user-select: none;
     width: 100px;
     text-align: center;
+    position: relative;
+}
+#pEdit {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 32px;
+}
+#pEdit input{
+    width: 42px;
+    height: 40px;
+    font-size: 20px;
 }
 #left-arrow{
     cursor: pointer;
