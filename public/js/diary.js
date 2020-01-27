@@ -35,6 +35,7 @@ $(document).ready(function(){
             let diary = parseInt(document.getElementById('diary-id').innerHTML);
 
             savePost(content, diary, getPostNumber);
+            getPostNumber = null;
         });
     }
     //SAVING POSTS
