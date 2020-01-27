@@ -4,6 +4,7 @@ $(document).ready(function(){
     function createPost(){
         let createPostPage = document.getElementById('create-post');
         let showPostPage = document.getElementById('diary-show');
+        document.getElementById("post-create-area").innerHTML = null;
 
         showPostPage.style.display = 'none';
         createPostPage.style.display = 'block';
@@ -38,7 +39,6 @@ $(document).ready(function(){
     }
     //SAVING POSTS
     function savePost(content, diary, postToUpdate = null) {
-        console.log(postToUpdate);
         if (content !== '') {
             if(postToUpdate === null) {
                 $.post('/p/create/' + diary, {title: 'title', content: content}, function (data) {
@@ -58,7 +58,6 @@ $(document).ready(function(){
                 $.ajax({ url: '/p/update/' + diary + '/' + postToUpdate, method: 'PUT', data:{title: 'title', content:content, counter:postToUpdate}})
                     .then(function(data) {
                         $("#post-content-show").html(data.content);
-                        console.log(data);
                     });
                 document.getElementById("post-create-area").innerHTML = null;
                 document.getElementById('create-post').style.display = 'none';

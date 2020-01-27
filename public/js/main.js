@@ -44,3 +44,11 @@ function showDiary(){
     getDiaryMain.style.display = 'block';
     getDiaryTitle.style.display = 'none';
 }
+
+$('#back').click(function () {
+    let createPostPage = document.getElementById('create-post');
+    let showPostPage = document.getElementById('diary-show');
+
+    showPostPage.style.display = 'block';
+    createPostPage.style.display = 'none';
+});

@@ -7,6 +7,8 @@
 {{--  POST VIEWING  --}}
     @if($method == 'show')
     <div id="diary-show" class="diary-main">
+        <div class="page-top">
+        </div>
         <div id="post-content-show" class="post-content">
             {{ $current_post->content }}
         </div>
@@ -22,6 +24,9 @@
 
 {{--POST CREATING--}}
     <div id="create-post" class="diary-main">
+        <div class="page-top row align-items-center">
+            <span id="back" class="ml-4"><=</span>
+        </div>
         <div id="post-create-area" class="post-content" contenteditable="true"></div>
         <div class="page-bottom row align-items-center">
             <button id="post-save" class="btn offset-2">Save post</button>

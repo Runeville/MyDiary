@@ -165,19 +165,18 @@ abbr, abbr[title]{
     height: 800px;
     width: 1150px;
     position: absolute;
-    padding-top: 15px;
+    /*padding-top: 15px;*/
 }
 
 /*Post viewing*/
-#diary-show{
+.diary-main{
     color: black;
-
 }
 
 .page-bottom{
-    height: 68px;
+    height: 60px;
 }
-#arrows-container{
+#arrows-container, #back{
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none;   /* Chrome/Safari/Opera */
     -khtml-user-select: none;    /* Konqueror */
@@ -198,8 +197,16 @@ abbr, abbr[title]{
 }
 
 /*Post creating*/
+.page-top{
+    width: 100%;
+    height: 40px;
+}
+#back{
+    cursor: pointer;
+}
+
 .post-content{
-    margin: 22px 46px 0;
+    margin: /*22px*/ 0 46px 0;
     width: 1070px;
     height: 695px;
     font-size: 30px;
