@@ -7,27 +7,67 @@ $(document).ready(function(){
 
         showPostPage.style.display = 'none';
         createPostPage.style.display = 'block';
+
+        $('#post-save').click(function () {
+            let content = document.getElementById("post-create-area").innerHTML;
+            let diary = parseInt(document.getElementById('diary-id').innerHTML);
+
+            savePost(content, diary);
+        });
     }
 
-    $('#post-save').click(function () {
-        let content = document.getElementById("post-create-area").innerHTML;
-        let diary = parseInt(document.getElementById('diary-id').innerHTML);
-        $.post('/p/create/' + diary, {title:'title', content:content}, function (data) {
-            $("#current-post").html(data.counter);
-            $("#post-content-show").html(data.content);
+    //POST UPDATING
+    document.getElementById("post-update-btn").addEventListener("click", updatePost);
+    let getPostNumber;
+    function updatePost(){
+        let getPostContent = document.getElementById('post-content-show').innerHTML;
+        getPostNumber = document.getElementById('current-post').innerHTML;
+        let createPostPage = document.getElementById('create-post');
+        let showPostPage = document.getElementById('diary-show');
+
+        document.getElementById('post-create-area').innerHTML = getPostContent;
+        showPostPage.style.display = 'none';
+        createPostPage.style.display = 'block';
+
+        $('#post-save').click(function () {
+            let content = document.getElementById("post-create-area").innerHTML;
+            let diary = parseInt(document.getElementById('diary-id').innerHTML);
+
+            savePost(content, diary, getPostNumber);
         });
-        document.getElementById('create-post').style.display = 'none';
-        document.getElementById('diary-show').style.display = 'block';
+    }
+    //SAVING POSTS
+    function savePost(content, diary, postToUpdate = null) {
+        console.log(postToUpdate);
+        if (content !== '') {
+            if(postToUpdate === null) {
+                $.post('/p/create/' + diary, {title: 'title', content: content}, function (data) {
+                    $("#current-post").html(data.counter);
+                    $("#post-content-show").html(data.content);
+                });
+                document.getElementById('create-post').style.display = 'none';
+                document.getElementById('diary-show').style.display = 'block';
+                document.getElementById("post-create-area").innerHTML = null;
 
-        document.getElementById("post-create-area").innerHTML = null;
+                let lastPost = parseInt(document.getElementById('last-post').innerHTML) + 1;
 
-        let lastPost = parseInt(document.getElementById('last-post').innerHTML) + 1;
+                $("#last-post").html(lastPost);
+                $('#right-arrow').addClass('not_active');
+                $('#left-arrow').removeClass('not_active');
+            } else {
+                $.ajax({ url: '/p/update/' + diary + '/' + postToUpdate, method: 'PUT', data:{title: 'title', content:content, counter:postToUpdate}})
+                    .then(function(data) {
+                        $("#post-content-show").html(data.content);
+                        console.log(data);
+                    });
+                document.getElementById("post-create-area").innerHTML = null;
+                document.getElementById('create-post').style.display = 'none';
+                document.getElementById('diary-show').style.display = 'block';
 
-        $("#last-post").html(lastPost);
-        $('#right-arrow').addClass('not_active');
-        $('#left-arrow').removeClass('not_active');
-    });
-    //POST CREATING END=======
+            }
+        }
+    }
+    //===========================================================================================
 
     //RIGHT ARROW
     $('#right-arrow').click(function () {

@@ -23,3 +23,4 @@ Route::get('/show/{diary}/{post}', 'PostController@show');
 Route::post('/create', 'DiaryController@store');
 
 Route::post('/p/create/{diary}', 'PostController@store');
+Route::put('/p/update/{diary}/{post}', 'PostController@update');

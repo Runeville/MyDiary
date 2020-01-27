@@ -37,4 +37,17 @@ class PostController extends Controller
             'post_new' => $post_new,
         );
     }
+
+    public function update(Diary $diary, $post){
+        $post = $diary->posts()->where('counter', $post)->get()[0];
+
+        $data = request()->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'counter' => 'required'
+        ]);
+        $post->update($data);
+
+        return $data;
+    }
 }

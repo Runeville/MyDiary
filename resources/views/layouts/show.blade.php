@@ -11,9 +11,10 @@
             {{ $current_post->content }}
         </div>
         <div class="page-bottom row align-items-center">
-            <div id="arrows-container" class="offset-5 col-3">
+            <div id="arrows-container" class="offset-5 mr-5">
                 <span id="left-arrow" class="not_active"><</span> <span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span> <span id="right-arrow">></span>
             </div>
+            <button id="post-update-btn" class="btn mr-2">Update post</button>
             <button id="post-create-btn" class="btn">Create new +</button>
         </div>
     </div>
