@@ -16,8 +16,9 @@
             <div id="arrows-container" class="offset-5 mr-5">
                 <span id="left-arrow" class="not_active"><</span> <span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span> <span id="right-arrow">></span>
             </div>
-            <button id="post-update-btn" class="btn mr-2">Update post</button>
-            <button id="post-create-btn" class="btn">Create new +</button>
+            <button id="post-create-btn" class="btn diary-bold">Create new +</button>
+            <button id="post-update-btn" class="btn mr-2 diary-bold">Update post</button>
+            <button id="post-delete-btn" class="btn mr-2 diary-bold">Delete post</button>
         </div>
     </div>
     @endif
@@ -25,11 +26,11 @@
 {{--POST CREATING--}}
     <div id="create-post" class="diary-main">
         <div class="page-top row align-items-center">
-            <span id="back" class="ml-4"><=</span>
+            <span id="back" class="ml-4 diary-bold"><=</span>
         </div>
         <div id="post-create-area" class="post-content" contenteditable="true"></div>
         <div class="page-bottom row align-items-center">
-            <button id="post-save" class="btn offset-2">Save post</button>
+            <button id="post-save" class="btn offset-2 diary-bold">Save post</button>
         </div>
     </div>
 </div>

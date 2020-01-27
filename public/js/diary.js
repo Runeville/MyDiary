@@ -40,6 +40,7 @@ $(document).ready(function(){
     }
     //SAVING POSTS
     function savePost(content, diary, postToUpdate = null) {
+        console.log(postToUpdate);
         if (content !== '') {
             if(postToUpdate === null) {
                 $.post('/p/create/' + diary, {title: 'title', content: content}, function (data) {
@@ -67,6 +68,21 @@ $(document).ready(function(){
             }
         }
     }
+    //DELETE POST
+    $('#post-delete-btn').click(function () {
+        let post = document.getElementById('current-post').innerHTML;
+        let diary = parseInt(document.getElementById('diary-id').innerHTML);
+        $.ajax({url:'/p/delete/' + diary + '/' + post, method:"DELETE", data:{counter:post}})
+            .then(function (data) {
+                let lastPost = parseInt(document.getElementById('last-post').innerText) - 1;
+                $("#last-post").html(lastPost);
+                $("#post-content-show").html(data.content);
+                $("#current-post").html(data.counter);
+                if(data.counter === lastPost){
+                    $('#right-arrow').addClass('not_active');
+                }
+            })
+    });
     //===========================================================================================
 
     //RIGHT ARROW

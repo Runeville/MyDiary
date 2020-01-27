@@ -175,20 +175,40 @@ abbr, abbr[title]{
 
 .page-bottom{
     height: 60px;
+    font-weight: 700;
+}
+.diary-bold{
+    font-weight: 700;
+    opacity: 0.7;
+}
+.diary-bold:hover{
+    opacity: 1;
+}
+.diary-bold:focus{
+    outline: none;
 }
 #arrows-container, #back{
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
     -moz-user-select: none;      /* Firefox */
     -ms-user-select: none;       /* Internet Explorer/Edge */
     user-select: none;
+    width: 100px;
+    text-align: center;
 }
 #left-arrow{
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+#left-arrow:hover{
+    padding-right: 5px;
 }
 #right-arrow{
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+#right-arrow:hover{
+    padding-left: 5px;
 }
 
 .not_active{

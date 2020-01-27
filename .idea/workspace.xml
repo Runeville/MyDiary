@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/diary.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/diary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +200,8 @@
       <workItem from="1580011479281" duration="25000" />
       <workItem from="1580019698413" duration="31385000" />
       <workItem from="1580101274052" duration="11401000" />
-      <workItem from="1580113333123" duration="258000" />
+      <workItem from="1580113333123" duration="303000" />
+      <workItem from="1580119596533" duration="14592000" />
     </task>
     <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
       <created>1578393031458</created>
@@ -281,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580113165620</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed a bug with creating and updating posts">
+      <created>1580113613992</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580113613992</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +372,8 @@
     <MESSAGE value="Finished making posts, fixed a bag with it" />
     <MESSAGE value="Made an updating posts (also have a strange bug with repeating variable &quot;getPostNumber&quot;)" />
     <MESSAGE value="Made a &quot;back&quot; button in creating and updating views" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a &quot;back&quot; button in creating and updating views" />
+    <MESSAGE value="Fixed a bug with creating and updating posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug with creating and updating posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#File_Watchers" timestamp="1578418297945">
@@ -374,10 +388,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418023554" />
-    <state x="466" y="136" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580113163261">
+    <state x="466" y="136" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580113612161">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="466" y="136" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580113163261" />
+    <state x="466" y="136" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580113612161" />
     <state x="595" y="340" key="EditFileWatcherDialog" timestamp="1578418024279">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -418,10 +432,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="461" y="193" key="SettingsEditor/0.46.1920.1034@0.46.1920.1034" timestamp="1578248271870" />
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1580113333881">
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog" timestamp="1580119595662">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1580113333881" />
+    <state x="656" y="385" key="com.intellij.ide.util.TipDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1580119595662" />
     <state x="769" y="478" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578249034826">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
@@ -438,9 +452,9 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="616" y="256" key="run.anything.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1578485762789" />
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1580106301660">
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1580124101138">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1580106301660" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034@0.46.1920.1034" timestamp="1580124101138" />
   </component>
 </project>

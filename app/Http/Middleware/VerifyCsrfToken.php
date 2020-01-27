@@ -22,5 +22,6 @@ class VerifyCsrfToken extends Middleware
         'stripe/*',
         'http://mydiary.loc/p/create/*',
         'http://mydiary.loc/p/update/*',
+        'http://mydiary.loc/p/delete/*',
     ];
 }
