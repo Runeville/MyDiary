@@ -40,7 +40,6 @@ $(document).ready(function(){
     });
 
     function savePost(content, diary, postToUpdate = null) {
-        console.log(postToUpdate);
         if (content !== '') {
             if(postToUpdate === null) {
                 $.post('/p/create/' + diary, {title: 'title', content: content}, function (data) {

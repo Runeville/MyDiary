@@ -20,8 +20,8 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'stripe/*',
-        'http://mydiary.loc/p/create/*',
-        'http://mydiary.loc/p/update/*',
-        'http://mydiary.loc/p/delete/*',
+        'p/create/*',
+        'p/update/*',
+        'p/delete/*',
     ];
 }
