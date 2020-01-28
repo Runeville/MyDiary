@@ -13,7 +13,7 @@
             {{ $current_post->content }}
         </div>
         <div class="page-bottom row align-items-center">
-            <div id="arrows-container" class="offset-5 mr-5">
+            <div id="arrows-container" class="offset-5 mr-4">
                 <span id="left-arrow" class="not_active"><</span> <span id="clickToEdit"><span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span></span> <span id="right-arrow">></span>
                 <div id="pEdit">
                     <input id="c-post-input" type="number">

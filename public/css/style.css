@@ -161,17 +161,15 @@ abbr, abbr[title]{
 .diary-main{
     background-image: url("../img/diary-show-bg.jpg");
     background-size: cover;
+    color: black;
     display: none;
     height: 800px;
     width: 1150px;
-    position: absolute;
+    position: relative;
     /*padding-top: 15px;*/
 }
 
 /*Post viewing*/
-.diary-main{
-    color: black;
-}
 
 .page-bottom{
     height: 60px;
@@ -193,7 +191,7 @@ abbr, abbr[title]{
     -moz-user-select: none;      /* Firefox */
     -ms-user-select: none;       /* Internet Explorer/Edge */
     user-select: none;
-    width: 100px;
+    width: 120px;
     text-align: center;
     position: relative;
 }
