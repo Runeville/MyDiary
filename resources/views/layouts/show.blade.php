@@ -7,11 +7,15 @@
 {{--  POST VIEWING  --}}
     @if($method == 'show')
     <div id="diary-show" class="diary-main">
-        <div class="page-top">
+        <div class="page-top"></div>
+
+        <div id="post-title-show" class="post-title">
+            {{ $current_post->title }}
         </div>
         <div id="post-content-show" class="post-content">
             {{ $current_post->content }}
         </div>
+
         <div class="page-bottom row align-items-center">
             <div id="arrows-container" class="offset-5 mr-4">
                 <span id="left-arrow" class="not_active"><</span> <span id="clickToEdit"><span id="current-post">{{ $current_post->counter }}</span>/<span id="last-post">{{$post_last}}</span></span> <span id="right-arrow">></span>
@@ -31,6 +35,7 @@
         <div class="page-top row align-items-center">
             <span id="back" class="ml-4 diary-bold"><=</span>
         </div>
+        <div id="post-create-title" class="post-title" contenteditable="true"></div>
         <div id="post-create-area" class="post-content" contenteditable="true"></div>
         <div class="page-bottom row align-items-center">
             <button id="post-save" class="btn offset-2 diary-bold">Save post</button>

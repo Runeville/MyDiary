@@ -26,17 +26,12 @@ class PostController extends Controller
     }
 
     public function show(Diary $diary, $post){
-        $posts = $diary->posts()->get();
+//        $posts = $diary->posts()->get();
         $post = $diary->posts()->where('counter', $post)->get()[0];
-        $post_last = $diary->posts()->latest('id')->first()->counter;
-        $post_new = $post_last + 1;
+//        $post_last = $diary->posts()->latest('id')->first()->counter;
+//        $post_new = $post_last + 1;
 
-        return array(
-            'posts' => $posts,
-            'post' => $post,
-            'post_last' => $post_last,
-            'post_new' => $post_new,
-        );
+        return $post;
     }
 
     public function update(Diary $diary, $post){

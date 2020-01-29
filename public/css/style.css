@@ -170,7 +170,6 @@ abbr, abbr[title]{
 }
 
 /*Post viewing*/
-
 .page-bottom{
     height: 60px;
     font-weight: 700;
@@ -229,35 +228,41 @@ abbr, abbr[title]{
 /*Post creating*/
 .page-top{
     width: 100%;
-    height: 40px;
+    height: 35px;
 }
 #back{
     cursor: pointer;
 }
+.post-title, .post-content{
+    width: 1070px;
+    overflow-y: scroll;
+}
+.post-title{
+    height: 60px;
+    font-weight: 700;
+    margin: 0 46px 0;
+}
 
 .post-content{
-    margin: /*22px*/ 0 46px 0;
-    width: 1070px;
-    height: 695px;
+    margin: 26px 46px 0;
+    height: 612px;
     font-size: 30px;
     line-height: 0.9;
-    overflow-y: scroll;
-    color: black;
 }
 
-.post-content:focus{
+.post-content:focus, .post-title:focus{
     outline: none;
 }
-.post-content::-webkit-scrollbar {
+.post-content::-webkit-scrollbar, .post-title::-webkit-scrollbar {
     width: 12px;
 }
 
-.post-content::-webkit-scrollbar-track {
+.post-content::-webkit-scrollbar-track, .post-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
 
-.post-content::-webkit-scrollbar-thumb {
+.post-content::-webkit-scrollbar-thumb, .post-title::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }

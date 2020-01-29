@@ -7,7 +7,16 @@ $(document).ready(function(){
 
         let createPostPage = document.getElementById('create-post');
         let showPostPage = document.getElementById('diary-show');
-        document.getElementById("post-create-area").innerHTML = null;
+        let lastPost = parseInt(document.getElementById('last-post').innerText);
+
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        let yyyy = today.getFullYear();
+        today = dd + '.' + mm + '.' + yyyy;
+
+        document.getElementById("post-create-title").innerHTML = "Note " + (lastPost + 1) + ' - ' + today + '.';
+        document.getElementById("post-create-area").innerHTML = 'New content';
 
         showPostPage.style.display = 'none';
         createPostPage.style.display = 'block';
@@ -19,10 +28,11 @@ $(document).ready(function(){
     function updatePost(){
         method = 'update';
         let getPostContent = document.getElementById('post-content-show').innerHTML;
-
+        let getPostTitle = document.getElementById('post-title-show').innerHTML;
         let createPostPage = document.getElementById('create-post');
         let showPostPage = document.getElementById('diary-show');
 
+        document.getElementById('post-create-title').innerHTML = getPostTitle;
         document.getElementById('post-create-area').innerHTML = getPostContent;
         showPostPage.style.display = 'none';
         createPostPage.style.display = 'block';
@@ -30,33 +40,37 @@ $(document).ready(function(){
     //SAVING POSTS
     $('#post-save').click(function () {
         let content = document.getElementById("post-create-area").innerHTML;
+        let title = document.getElementById("post-create-title").innerHTML;
         let diary = parseInt(document.getElementById('diary-id').innerHTML);
         if(method === 'create') {
-            savePost(content, diary);
+            savePost(content, title, diary);
         } else if (method === 'update'){
             getPostNumber = document.getElementById('current-post').innerHTML;
-            savePost(content, diary, getPostNumber);
+            savePost(content, title, diary, getPostNumber);
         }
     });
 
-    function savePost(content, diary, postToUpdate = null) {
+    function savePost(content, title, diary, postToUpdate = null) {
         if (content !== '') {
             if(postToUpdate === null) {
-                $.post('/p/create/' + diary, {title: 'title', content: content}, function (data) {
-                    $("#current-post").html(data.counter);
+                $.post('/p/create/' + diary, {title: title, content: content}, function (data) {
+                    $("#post-title-show").html(data.title);
                     $("#post-content-show").html(data.content);
+                    $("#current-post").html(data.counter);
                 });
                 document.getElementById('create-post').style.display = 'none';
                 document.getElementById('diary-show').style.display = 'block';
                 document.getElementById("post-create-area").innerHTML = null;
+                document.getElementById("post-create-title").innerHTML = null;
 
                 let lastPost = parseInt(document.getElementById('last-post').innerHTML) + 1;
 
                 $("#last-post").html(lastPost);
                 checkArrow();
             } else {
-                $.ajax({ url: '/p/update/' + diary + '/' + postToUpdate, method: 'PUT', data:{title: 'title', content:content, counter:postToUpdate}})
+                $.ajax({ url: '/p/update/' + diary + '/' + postToUpdate, method: 'PUT', data:{title: title, content:content, counter:postToUpdate}})
                     .then(function(data) {
+                        $("#post-title-show").html(data.title);
                         $("#post-content-show").html(data.content);
                     });
                 document.getElementById("post-create-area").innerHTML = null;
@@ -90,8 +104,9 @@ $(document).ready(function(){
             post = 1;
         }
         $.get("/show/" + diary + "/" + post, function (data) {
-            $("#current-post").html(data.post.counter);
-            $("#post-content-show").html(data.post.content);
+            $("#post-title-show").html(data.title);
+            $("#post-content-show").html(data.content);
+            $("#current-post").html(data.counter);
         });
         checkArrow(post);
 
