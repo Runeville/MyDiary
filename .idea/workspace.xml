@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/diary.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/diary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,7 +215,7 @@
       <workItem from="1580214996579" duration="3898000" />
       <workItem from="1580295861725" duration="4626000" />
       <workItem from="1580382083014" duration="12967000" />
-      <workItem from="1580459079336" duration="3416000" />
+      <workItem from="1580459079336" duration="3616000" />
     </task>
     <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
       <created>1578393031458</created>
@@ -356,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580460162082</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Made some fixes in search bar">
+      <created>1580462699346</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1580462699346</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +441,8 @@
     <MESSAGE value="Some css works" />
     <MESSAGE value="Made titles for posts" />
     <MESSAGE value="Made search bar which is not working but can show posts you try to find" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made search bar which is not working but can show posts you try to find" />
+    <MESSAGE value="Made some fixes in search bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some fixes in search bar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#File_Watchers" timestamp="1578418297945">
@@ -455,10 +457,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418023554" />
-    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580460155660">
+    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580462697297">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580460155660" />
+    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580462697297" />
     <state x="595" y="340" key="EditFileWatcherDialog" timestamp="1578418024279">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
