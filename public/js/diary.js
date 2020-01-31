@@ -96,7 +96,19 @@ $(document).ready(function(){
     });
     //===========================================================================================
     //SWITCHING POSTS+++++++++++++++++++++
-    //SWITCHING BY INPUT
+    $('#search').keyup(function(){
+        let title = $('#search').val();
+        $.post('/search', {
+            title:title
+        }, function (data) {
+            console.log(data);
+            document.getElementById('search-inner').innerHTML = null;
+            for (let post in data) {
+                document.getElementById('search-inner').innerHTML += '<a href="#" class="search-item">' + data[post]['title'] + '</a> <br>';
+            }
+        });
+    });
+
     function showPost(post = 1){
         let diary = parseInt(document.getElementById('diary-id').innerHTML);
         let lastPost = parseInt(document.getElementById('last-post').innerHTML);

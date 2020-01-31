@@ -23,5 +23,6 @@ class VerifyCsrfToken extends Middleware
         'p/create/*',
         'p/update/*',
         'p/delete/*',
+        'search'
     ];
 }

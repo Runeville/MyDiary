@@ -26,12 +26,22 @@ class PostController extends Controller
     }
 
     public function show(Diary $diary, $post){
-//        $posts = $diary->posts()->get();
         $post = $diary->posts()->where('counter', $post)->get()[0];
-//        $post_last = $diary->posts()->latest('id')->first()->counter;
-//        $post_new = $post_last + 1;
 
         return $post;
+    }
+
+    public function search(Request $request){
+        $posts = Post::search($request->title)->get();
+        foreach ($posts as $post) {
+            if (strpos($post['title'], $request->title) !== false){
+                $foundPosts[] = $post;
+            }
+        }
+        if(!empty($foundPosts)){
+            return $foundPosts;
+        }
+        return null;
     }
 
     public function update(Diary $diary, $post){

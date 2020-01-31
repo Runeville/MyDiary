@@ -66,6 +66,8 @@ return [
             'block_for' => null,
         ],
 
+        'queue' => true,
+
     ],
 
     /*

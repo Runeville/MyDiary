@@ -7,7 +7,12 @@
 {{--  POST VIEWING  --}}
     @if($method == 'show')
     <div id="diary-show" class="diary-main">
-        <div class="page-top"></div>
+        <div class="page-top row align-items-center">
+            <div class="search-container offset-3">
+                <input type="search" id="search" placeholder="Search by title" autocomplete="off">
+                <div id="search-inner"></div>
+            </div>
+        </div>
 
         <div id="post-title-show" class="post-title">
             {{ $current_post->title }}
