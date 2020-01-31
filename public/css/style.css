@@ -237,7 +237,9 @@ abbr, abbr[title]{
 }
 #search{
     font-size: 25px;
-    height: 30px;
+    height: 35px;
+    border-radius: 15px;
+
 }
 #search-inner{
     max-height: 150px;
@@ -245,10 +247,17 @@ abbr, abbr[title]{
     overflow-x: hidden;
 }
 .search-item{
+    display: block;
     background: white;
+    text-decoration: none;
     white-space: nowrap;
     color: black;
     font-size: 25px;
+    border-bottom: rgba(120, 120, 120, 0.35) solid 1px;
+}
+.search-item:hover{
+    border: black solid 1px;
+    border-radius: 20px;
 }
 
 #back{

@@ -1,104 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="Made titles for posts">
-      <change afterPath="$PROJECT_DIR$/config/scout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/bin/algolia-doctor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/bin/install-dependencies-without-composer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AccountClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Algolia.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/AnalyticsClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Cache/FileCacheDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Cache/NullCacheDriver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Config/AbstractConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Config/AnalyticsConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Config/InsightsConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Config/PlacesConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Config/SearchConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/AlgoliaException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/BadRequestException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/CannotWaitException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/MissingObjectId.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/NotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/RequestException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/RetriableException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Exceptions/UnreachableException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Guzzle6HttpClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/HttpClientInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Php53HttpClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/BufferStream.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/PumpStream.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/Stream.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/Uri.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/UriResolver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Http/Psr7/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Insights/UserInsightsClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/InsightsClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Iterators/AbstractAlgoliaIterator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Iterators/ObjectIterator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Iterators/RuleIterator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Iterators/SynonymIterator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Log/DebugLogger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/PlacesClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/RequestOptions/RequestOptions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/RequestOptions/RequestOptionsFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/AbstractResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/AddApiKeyResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/BatchIndexingResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/DeleteApiKeyResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/IndexingResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/MultiResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/MultipleIndexBatchIndexingResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/NullResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/RestoreApiKeyResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Response/UpdateApiKeyResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/RetryStrategy/ApiWrapper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/RetryStrategy/ApiWrapperInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/RetryStrategy/ClusterHosts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/RetryStrategy/Host.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/RetryStrategy/HostCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/SearchClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/SearchIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Support/Helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/Support/UserAgent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php/src/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/algolia-doctor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/algolia-doctor.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/RequestInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/ResponseInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/ServerRequestInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/StreamInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/UploadedFileInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/UriInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyDiary.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyDiary.loc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="499370cc-162d-43a6-913f-efbe8b095516" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/diary.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/diary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +221,7 @@
       <workItem from="1580214996579" duration="3898000" />
       <workItem from="1580295861725" duration="4626000" />
       <workItem from="1580382083014" duration="12967000" />
-      <workItem from="1580459079336" duration="819000" />
+      <workItem from="1580459079336" duration="3416000" />
     </task>
     <task id="LOCAL-00001" summary="Made a auth &amp; reg styles and managing">
       <created>1578393031458</created>
@@ -441,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580299750234</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Made search bar which is not working but can show posts you try to find">
+      <created>1580460162082</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1580460162082</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +439,8 @@
     <MESSAGE value="Fixed a bug with creating and updating posts" />
     <MESSAGE value="Some css works" />
     <MESSAGE value="Made titles for posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made titles for posts" />
+    <MESSAGE value="Made search bar which is not working but can show posts you try to find" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made search bar which is not working but can show posts you try to find" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#File_Watchers" timestamp="1578418297945">
@@ -539,10 +455,10 @@
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
     <state x="740" y="267" key="#com.intellij.ide.macro.MacrosDialog/0.46.1920.1034@0.46.1920.1034" timestamp="1578418023554" />
-    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580383845770">
+    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2" timestamp="1580460155660">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>
-    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580383845770" />
+    <state x="833" y="186" width="1010" height="816" key="CommitChangelistDialog2/0.46.1920.1034@0.46.1920.1034" timestamp="1580460155660" />
     <state x="595" y="340" key="EditFileWatcherDialog" timestamp="1578418024279">
       <screen x="0" y="46" width="1920" height="1034" />
     </state>

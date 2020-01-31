@@ -32,15 +32,17 @@ class PostController extends Controller
     }
 
     public function search(Request $request){
-        $posts = Post::search($request->title)->get();
-        foreach ($posts as $post) {
-            if (strpos($post['title'], $request->title) !== false){
-                $foundPosts[] = $post;
+        if($request->title !== null){
+            $posts = Post::search($request->title)->get();
+            $foundPosts = null;
+            foreach ($posts as $post) {
+                if (strpos(mb_strtolower($post['title']), mb_strtolower($request->title)) !== false){
+                    $foundPosts[] = $post;
+                }
             }
-        }
-        if(!empty($foundPosts)){
             return $foundPosts;
         }
+
         return null;
     }
 

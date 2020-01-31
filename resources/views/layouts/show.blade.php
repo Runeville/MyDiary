@@ -9,7 +9,7 @@
     <div id="diary-show" class="diary-main">
         <div class="page-top row align-items-center">
             <div class="search-container offset-3">
-                <input type="search" id="search" placeholder="Search by title" autocomplete="off">
+                <input type="text" id="search" placeholder="Search by title" autocomplete="off">
                 <div id="search-inner"></div>
             </div>
         </div>

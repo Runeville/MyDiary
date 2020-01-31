@@ -103,8 +103,10 @@ $(document).ready(function(){
         }, function (data) {
             console.log(data);
             document.getElementById('search-inner').innerHTML = null;
-            for (let post in data) {
-                document.getElementById('search-inner').innerHTML += '<a href="#" class="search-item">' + data[post]['title'] + '</a> <br>';
+            if(data.title !== null) {
+                for (let post in data) {
+                    document.getElementById('search-inner').innerHTML += '<a href="#" class="search-item" style="text-decoration: none">' + data[post]['title'] + '</a>';
+                }
             }
         });
     });
