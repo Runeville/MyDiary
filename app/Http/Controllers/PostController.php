@@ -25,10 +25,10 @@ class PostController extends Controller
         return $data;
     }
 
-    public function show(Diary $diary, $post){
-        $post = $diary->posts()->where('counter', $post)->get()[0];
+    public function show(Diary $diary){
+        $posts = $diary->posts()->get();
 
-        return $post;
+        return $posts;
     }
 
     public function search(Request $request){
@@ -60,11 +60,9 @@ class PostController extends Controller
     }
 
     public function delete(Diary $diary, $post){
-        $posts = $diary->posts()->get();
         $post = $diary->posts()->where('counter', $post)->get()[0];
-
         if($diary->posts()->count() != 1){
-            Post::where('id', $post->id)->delete();
+            $post->delete();
         } else {
             die();
         }

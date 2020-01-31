@@ -38,6 +38,7 @@ function displaySidebar(){
 
 document.getElementById("btn-show-diary").addEventListener("click", showDiary);
 function showDiary(){
+    $.get();
     let getDiaryMain = document.getElementById('diary-show');
     let getDiaryTitle = document.getElementById('diary-title');
 

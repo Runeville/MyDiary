@@ -21,7 +21,7 @@ Route::get('/show/{diary}', 'DiaryController@index');
 
 Route::post('/create', 'DiaryController@store');
 
-Route::get('/show/{diary}/{post}', 'PostController@show');
+Route::get('/p/show/{diary}', 'PostController@show');
 Route::post('/search', 'PostController@search');
 Route::post('/p/create/{diary}', 'PostController@store');
 Route::put('/p/update/{diary}/{post}', 'PostController@update');

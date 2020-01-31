@@ -1,13 +1,21 @@
 $(document).ready(function(){
+    let posts;
+    let currentPost;
+    let diary = parseInt(document.getElementById('diary-id').innerHTML);
+    let lastPost;
     let method;
+    let createPostPage = document.getElementById('create-post');
+    let showPostPage = document.getElementById('diary-show');
+    $.get('/p/show/' + diary, function (data) {
+        posts = data;
+        currentPost = posts[0];
+        lastPost = posts[posts.length - 1];
+    });
+
     //POST CREATING
     document.getElementById("post-create-btn").addEventListener("click", createPost);
     function createPost(){
         method = 'create';
-
-        let createPostPage = document.getElementById('create-post');
-        let showPostPage = document.getElementById('diary-show');
-        let lastPost = parseInt(document.getElementById('last-post').innerText);
 
         let today = new Date();
         let dd = String(today.getDate()).padStart(2, '0');
@@ -15,7 +23,7 @@ $(document).ready(function(){
         let yyyy = today.getFullYear();
         today = dd + '.' + mm + '.' + yyyy;
 
-        document.getElementById("post-create-title").innerHTML = "Note " + (lastPost + 1) + ' - ' + today + '.';
+        document.getElementById("post-create-title").innerHTML = "Note " + (lastPost['counter'] + 1) + ' - ' + today + '.';
         document.getElementById("post-create-area").innerHTML = 'New content';
 
         showPostPage.style.display = 'none';
@@ -27,13 +35,9 @@ $(document).ready(function(){
     let getPostNumber;
     function updatePost(){
         method = 'update';
-        let getPostContent = document.getElementById('post-content-show').innerHTML;
-        let getPostTitle = document.getElementById('post-title-show').innerHTML;
-        let createPostPage = document.getElementById('create-post');
-        let showPostPage = document.getElementById('diary-show');
 
-        document.getElementById('post-create-title').innerHTML = getPostTitle;
-        document.getElementById('post-create-area').innerHTML = getPostContent;
+        document.getElementById('post-create-title').innerHTML = currentPost['title'];
+        document.getElementById('post-create-area').innerHTML = currentPost['content'];
         showPostPage.style.display = 'none';
         createPostPage.style.display = 'block';
     }
@@ -41,100 +45,126 @@ $(document).ready(function(){
     $('#post-save').click(function () {
         let content = document.getElementById("post-create-area").innerHTML;
         let title = document.getElementById("post-create-title").innerHTML;
-        let diary = parseInt(document.getElementById('diary-id').innerHTML);
         if(method === 'create') {
             savePost(content, title, diary);
         } else if (method === 'update'){
-            getPostNumber = document.getElementById('current-post').innerHTML;
-            savePost(content, title, diary, getPostNumber);
+            savePost(content, title, diary, currentPost['counter']);
         }
     });
 
     function savePost(content, title, diary, postToUpdate = null) {
         if (content !== '') {
             if(postToUpdate === null) {
-                $.post('/p/create/' + diary, {title: title, content: content}, function (data) {
-                    $("#post-title-show").html(data.title);
-                    $("#post-content-show").html(data.content);
-                    $("#current-post").html(data.counter);
-                });
-                document.getElementById('create-post').style.display = 'none';
-                document.getElementById('diary-show').style.display = 'block';
+                posts.push({diary_id: diary, counter: (lastPost['counter'] + 1), title: title, content: content});
+                lastPost = posts[posts.length - 1];
+                showPost(lastPost['counter']);
+                $.post('/p/create/' + diary, {title: title, content: content});
+                createPostPage.style.display = 'none';
+                showPostPage.style.display = 'block';
                 document.getElementById("post-create-area").innerHTML = null;
                 document.getElementById("post-create-title").innerHTML = null;
 
-                let lastPost = parseInt(document.getElementById('last-post').innerHTML) + 1;
-
-                $("#last-post").html(lastPost);
                 checkArrow();
             } else {
-                $.ajax({ url: '/p/update/' + diary + '/' + postToUpdate, method: 'PUT', data:{title: title, content:content, counter:postToUpdate}})
-                    .then(function(data) {
-                        $("#post-title-show").html(data.title);
-                        $("#post-content-show").html(data.content);
-                    });
+                currentPost.title = title;
+                currentPost.content = content;
+                for (let i = 0; i < posts.length; i++){
+                    if(posts[i]['counter'] === currentPost['counter']){
+                        posts[i] = currentPost;
+                        break;
+                    }
+                }
+                showPost(currentPost['counter']);
+                $.ajax({ url: '/p/update/' + diary + '/' + postToUpdate, method: 'PUT', data:{title: title, content:content, counter:postToUpdate}});
                 document.getElementById("post-create-area").innerHTML = null;
-                document.getElementById('create-post').style.display = 'none';
-                document.getElementById('diary-show').style.display = 'block';
+                createPostPage.style.display = 'none';
+                showPostPage.style.display = 'block';
             }
         }
     }
     //DELETE POST
     $('#post-delete-btn').click(function () {
-        let post = document.getElementById('current-post').innerHTML;
-        let diary = parseInt(document.getElementById('diary-id').innerHTML);
-        $.ajax({url:'/p/delete/' + diary + '/' + post, method:"DELETE", data:{counter:post}})
-            .then(function (data) {
-                let lastPost = parseInt(document.getElementById('last-post').innerText) - 1;
-                $("#last-post").html(lastPost);
-                $("#post-content-show").html(data.content);
-                $("#current-post").html(data.counter);
-                if(data.counter === lastPost){
-                    $('#right-arrow').addClass('not_active');
+        if (posts.length !== 1){
+            $.ajax({
+                url: '/p/delete/' + diary + '/' + currentPost['counter'],
+                method: "DELETE",
+                data: {counter: currentPost['counter']}
+            });
+
+            posts.splice(currentPost['counter'] - 1, 1);
+            for (let i = currentPost['counter'] - 1; i < posts.length; i++) {
+                posts[i]['counter'] -= 1;
+            }
+
+            if (currentPost['counter'] <= posts.length) {
+                for (let i = 0; i < posts.length; i++) {
+                    if (posts[i]['counter'] === currentPost['counter']) {
+                        currentPost = posts[i];
+                        break;
+                    }
                 }
-            })
+            } else {
+                for (let i = 0; i < posts.length; i++) {
+                    if (posts[i]['counter'] === currentPost['counter'] - 1) {
+                        currentPost = posts[i];
+                        break;
+                    }
+                }
+            }
+            lastPost = posts[posts.length - 1];
+            showPost(currentPost['counter']);
+        }
     });
     //===========================================================================================
     //SWITCHING POSTS+++++++++++++++++++++
+    //Search
     $('#search').keyup(function(){
-        let title = $('#search').val();
-        $.post('/search', {
-            title:title
-        }, function (data) {
-            console.log(data);
-            document.getElementById('search-inner').innerHTML = null;
-            if(data.title !== null) {
-                for (let post in data) {
-                    document.getElementById('search-inner').innerHTML += '<a href="#" class="search-item" style="text-decoration: none">' + data[post]['title'] + '</a>';
+        document.getElementById('search-inner').innerHTML = null;
+        let title = $('#search').val().toLowerCase();
+        if(title !== '') {
+            for (let i = 0; i < posts.length; i++) {
+                if (posts[i]['title'].toLowerCase().indexOf(title) !== -1) {
+                    document.getElementById('search-inner').innerHTML += '<div class="search-item" title=' + posts[i]["counter"] + '>' + posts[i]['title'] + '</div>';
                 }
             }
-        });
+            let searchItems = document.querySelectorAll(".search-item");
+            for (let i = 0; i < searchItems.length; i++) {
+                searchItems[i].onclick = function(){
+                    document.getElementById('search-inner').innerHTML = null;
+                    document.getElementById('search').value = null;
+                    showPost(parseInt(searchItems[i].getAttribute('title')));
+                };
+            }
+        }
     });
 
+
     function showPost(post = 1){
-        let diary = parseInt(document.getElementById('diary-id').innerHTML);
-        let lastPost = parseInt(document.getElementById('last-post').innerHTML);
         if(post > lastPost || post < 1) {
             post = 1;
         }
-        $.get("/show/" + diary + "/" + post, function (data) {
-            $("#post-title-show").html(data.title);
-            $("#post-content-show").html(data.content);
-            $("#current-post").html(data.counter);
-        });
-        checkArrow(post);
+
+        for (let i = 0; i < posts.length; i++){
+            if(posts[i]['counter'] === post){
+                currentPost = posts[i];
+                break;
+            }
+        }
+        $("#post-title-show").html(currentPost.title);
+        $("#post-content-show").html(currentPost.content);
+        $("#current-post").html(currentPost.counter);
+        $("#last-post").html(lastPost.counter);
+        checkArrow(currentPost['counter']);
 
     }
 
-    function checkArrow(currentPost = document.getElementById('last-post').innerHTML){
-        let lastPost = parseInt(document.getElementById('last-post').innerHTML);
-        currentPost = parseInt(currentPost);
-        if(currentPost === lastPost){
+    function checkArrow(){
+        if(currentPost['counter'] === lastPost['counter']){
             $('#right-arrow').addClass('not_active');
         } else {
             $('#right-arrow').removeClass('not_active');
         }
-        if(currentPost === 1){
+        if(currentPost['counter'] === 1){
             $('#left-arrow').addClass('not_active');
         } else {
             $('#left-arrow').removeClass('not_active');
@@ -149,13 +179,10 @@ $(document).ready(function(){
             && pEdit.has(e.target).length === 0)
         {
             pEdit.hide();
-            pEditContent = $('#pEdit input').val();
+            pEditContent = $('#c-post-input').val();
             if(pEditContent) {
-                document.getElementById('current-post').innerText = pEditContent;
                 document.getElementById('c-post-input').value = null;
-
-                showPost(pEditContent);
-
+                showPost(parseInt(pEditContent));
             }
         }
     });
@@ -163,21 +190,20 @@ $(document).ready(function(){
     $('#clickToEdit').dblclick(function () {
         document.getElementById('c-post-input').value = document.getElementById('current-post').innerText;
         pEdit.show();
+        $('#c-post-input').select();
     });
 
     //RIGHT ARROW
     $('#right-arrow').click(function () {
-        let currentPost = parseInt(document.getElementById('current-post').innerHTML);
-        if(currentPost !== parseInt(document.getElementById('last-post').innerText)) {
-            showPost(currentPost + 1);
+        if(currentPost['counter'] !== lastPost['counter']) {
+            showPost(currentPost['counter'] + 1);
         }
     });
 
     //LEFT ARROW
     $('#left-arrow').click(function () {
-        let currentPost = parseInt(document.getElementById('current-post').innerHTML);
-        if(currentPost !== 1) {
-            showPost(currentPost - 1);
+        if(currentPost['counter'] !== 1) {
+            showPost(currentPost['counter'] - 1);
         }
     })
 });

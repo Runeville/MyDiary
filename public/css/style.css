@@ -239,7 +239,10 @@ abbr, abbr[title]{
     font-size: 25px;
     height: 35px;
     border-radius: 15px;
-
+    padding-left: 5px;
+}
+#search:focus{
+    outline: none;
 }
 #search-inner{
     max-height: 150px;
@@ -253,8 +256,14 @@ abbr, abbr[title]{
     white-space: nowrap;
     color: black;
     font-size: 25px;
-    border-bottom: rgba(120, 120, 120, 0.35) solid 1px;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
 }
+
 .search-item:hover{
     border: black solid 1px;
     border-radius: 20px;
