@@ -7,7 +7,7 @@
     <hr>
     <ul>
         @foreach($user->diaries as $diary)
-            <li><a class="sidebar-diary" href="/show/{{$diary->id}}"><abbr title="<?= nl2br($diary->title) ?>"><?= nl2br($diary->title) ?></abbr></a></li>
+            <li><a class="sidebar-diary" href="/show/{{$diary->counter}}"><abbr title="<?= nl2br($diary->title) ?>"><?= nl2br($diary->title) ?></abbr></a></li>
         @endforeach
     </ul>
 </aside>

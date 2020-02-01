@@ -9,7 +9,20 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-    public function store(Diary $diary){
+    protected static function getDiary($diary){
+        $diary = auth()->user()->diaries()->where([['user_id', auth()->user()->id], ['counter', $diary]])->get();
+
+        return $diary;
+    }
+
+    public function store($diary){
+        $diary = self::getDiary($diary);
+        if (count($diary) != 0){
+            $diary = $diary[0];
+        } else{
+            return redirect('/');
+        }
+
         $data = request()->validate([
             'title' => 'required',
             'content' => 'required',
@@ -25,7 +38,13 @@ class PostController extends Controller
         return $data;
     }
 
-    public function show(Diary $diary){
+    public function show($diary){
+        $diary = self::getDiary($diary);
+        if (count($diary) !== 0){
+            $diary = $diary[0];
+        } else{
+            return redirect('/');
+        }
         $posts = $diary->posts()->get();
 
         return $posts;
@@ -46,7 +65,13 @@ class PostController extends Controller
         return null;
     }
 
-    public function update(Diary $diary, $post){
+    public function update($diary, $post){
+        $diary = self::getDiary($diary);
+        if (count($diary) !== 0){
+            $diary = $diary[0];
+        } else{
+            return redirect('/');
+        }
         $post = $diary->posts()->where('counter', $post)->get()[0];
 
         $data = request()->validate([
@@ -59,7 +84,13 @@ class PostController extends Controller
         return $data;
     }
 
-    public function delete(Diary $diary, $post){
+    public function delete($diary, $post){
+        $diary = self::getDiary($diary);
+        if (count($diary) !== 0){
+            $diary = $diary[0];
+        } else{
+            return redirect('/');
+        }
         $post = $diary->posts()->where('counter', $post)->get()[0];
         if($diary->posts()->count() != 1){
             $post->delete();

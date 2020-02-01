@@ -1,6 +1,6 @@
 <div class="diary-handbook row">
     <div id="diary-title" class="col-4 offset-4 text-center">
-        <p class="create-title mb-4 text-center"><span id="diary-id" style="display: none">{{$diary->id}}</span>{{ $diary->title }}</p>
+        <p class="create-title mb-4 text-center"><span id="diary-id" style="display: none">{{$diary->counter}}</span>{{ $diary->title }}</p>
         <button id="btn-show-diary" class="btn btn-reg">Open the diary</button>
     </div>
 

@@ -22,7 +22,7 @@ Route::get('/show/{diary}', 'DiaryController@index');
 Route::post('/create', 'DiaryController@store');
 
 Route::get('/p/show/{diary}', 'PostController@show');
-Route::post('/search', 'PostController@search');
 Route::post('/p/create/{diary}', 'PostController@store');
+Route::post('/search', 'PostController@search');
 Route::put('/p/update/{diary}/{post}', 'PostController@update');
 Route::delete('/p/delete/{diary}/{post}', 'PostController@delete');
