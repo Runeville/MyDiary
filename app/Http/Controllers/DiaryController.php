@@ -47,7 +47,7 @@ class DiaryController extends Controller
 
     public function store(){
         $data = request()->validate([
-            'title' => 'required|max:100|min:2',
+            'title' => 'required|max:100|min:1',
         ]);
         $data['counter'] = auth()->user()->diaries()->count() + 1;
 
