@@ -4,8 +4,8 @@ $(document).ready(function(){
     let diary = parseInt(document.getElementById('diary-id').innerHTML);
     let lastPost;
     let method;
-    let createPostPage = $('#create-post');
-    let showPostPage = $('#diary-show');
+    let createPostPage = document.getElementById('create-post');
+    let showPostPage = document.getElementById('diary-show');
     $.get('/p/show/' + diary, function (data) {
         posts = data;
         currentPost = posts[0];
@@ -26,7 +26,8 @@ $(document).ready(function(){
         document.getElementById("post-create-title").innerHTML = "Note " + (lastPost['counter'] + 1) + ' - ' + today + '.';
         document.getElementById("post-create-area").innerHTML = 'New content';
 
-        changeDisplay(1);
+        showPostPage.style.display = 'none';
+        createPostPage.style.display = 'block';
     }
 
     //POST UPDATING
@@ -37,7 +38,8 @@ $(document).ready(function(){
 
         document.getElementById('post-create-title').innerHTML = currentPost['title'];
         document.getElementById('post-create-area').innerHTML = currentPost['content'];
-        changeDisplay(1);
+        showPostPage.style.display = 'none';
+        createPostPage.style.display = 'block';
     }
     //SAVING POSTS
     $('#post-save').click(function () {
@@ -57,8 +59,8 @@ $(document).ready(function(){
                 lastPost = posts[posts.length - 1];
                 showPost(lastPost['counter']);
                 $.post('/p/create/' + diary, {title: title, content: content});
-
-                changeDisplay();
+                createPostPage.style.display = 'none';
+                showPostPage.style.display = 'block';
                 document.getElementById("post-create-area").innerHTML = null;
                 document.getElementById("post-create-title").innerHTML = null;
 
@@ -75,8 +77,8 @@ $(document).ready(function(){
                 showPost(currentPost['counter']);
                 $.ajax({ url: '/p/update/' + diary + '/' + postToUpdate, method: 'PUT', data:{title: title, content:content, counter:postToUpdate}});
                 document.getElementById("post-create-area").innerHTML = null;
-                changeDisplay();
-
+                createPostPage.style.display = 'none';
+                showPostPage.style.display = 'block';
             }
         }
     }
@@ -190,16 +192,6 @@ $(document).ready(function(){
         pEdit.show();
         $('#c-post-input').select();
     });
-
-    function changeDisplay(method = 0){
-        if(method === 0){
-            createPostPage.hide();
-            showPostPage.show();
-        } else {
-            showPostPage.hide();
-            createPostPage.show();
-        }
-    }
 
     //RIGHT ARROW
     $('#right-arrow').click(function () {
