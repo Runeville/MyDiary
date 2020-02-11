@@ -107,12 +107,13 @@ abbr, abbr[title]{
 /*DIARY=====================*/
 .container-diary{
     margin-top: 20px;
-    /*width: 75%;*/
     width: 1125px;
-    height: 85vh;
-    overflow: scroll;
+    height: 819px;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-size: cover;
     position: relative;
+    padding: 0;
 }
 .container-diary::-webkit-scrollbar {
     width: 12px;
@@ -132,7 +133,7 @@ abbr, abbr[title]{
 .diary-handbook{
     background: url("../img/diary.jpg") no-repeat;
     height: 800px;
-    width: 1150px;
+    margin: 0;
 }
 /*Create diary*/
 .create-title{
@@ -164,7 +165,7 @@ abbr, abbr[title]{
     color: black;
     display: none;
     height: 800px;
-    width: 1150px;
+    width: 100%;
     position: relative;
     /*padding-top: 15px;*/
 }
@@ -173,6 +174,8 @@ abbr, abbr[title]{
 .page-bottom{
     height: 60px;
     font-weight: 700;
+    width: 100%;
+    margin: 0;
 }
 .diary-bold{
     font-weight: 700;
@@ -229,6 +232,7 @@ abbr, abbr[title]{
 .page-top{
     width: 100%;
     height: 35px;
+    margin: 0;
 }
 .search-container{
     width: 250px;
@@ -273,17 +277,17 @@ abbr, abbr[title]{
     cursor: pointer;
 }
 .post-title, .post-content{
-    width: 1070px;
+    width: 94%;
     overflow-y: scroll;
+    margin-left: 46px;
 }
 .post-title{
     height: 60px;
     font-weight: 700;
-    margin: 0 46px 0;
 }
 
 .post-content{
-    margin: 26px 46px 0;
+    margin-top: 26px;
     height: 612px;
     font-size: 30px;
     line-height: 0.9;

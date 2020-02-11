@@ -34,12 +34,20 @@
     .container-diary{
         width: 800px;
     }
+
+    .post-title, .post-content{
+        width: 92%;
+    }
 }
 
 /*MEDIA 885px*/
 @media (max-width: 885px){
     .container-diary{
         width: 600px;
+    }
+
+    .post-title, .post-content{
+        width: 90%;
     }
 }
 
@@ -68,11 +76,22 @@
         width: 75%;
     }
 
+    .post-title, .post-content{
+        width: 85%;
+    }
+
     .btn-reg{
         font-size: 32px;
     }
 
     #title{
         font-size: 30px;
+    }
+}
+
+/*MEDIA 400px*/
+@media (max-width: 400px){
+    .post-title, .post-content{
+        width: 80%;
     }
 }
